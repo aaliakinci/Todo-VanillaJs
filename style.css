@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
+
+* {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    background-color: #fa6e6e
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#input-container {
+    padding: 1%;
+    margin: auto;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+    border: none;
+}
+
+#sort-by {
+    text-align: center;
+}
+
+#items-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+}
+
+#list {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.list-item {
+    background-color: #fff;
+    padding: 3%;
+    border-top: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(228, 228, 228);
+    display: table;
+}
+
+.list-item:hover, .complete {
+    background-color: #95dcec;
+    border-bottom: 1px solid #75d5eb;
+    border-top: 1px solid #75d5eb;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+label {
+    display: table-cell;
+    width: 100%;
+}
+
+button {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #a0ddeb;
+}
+
+#button {
+    text-align: right;
+}
+
+.delete-button {
+    background-color: #e2f8fd;
+    margin-left: 0.5rem;
+    display: inline-block;
+    text-align: right;
+}
+
+.delete-button:hover {
+    background-color: #e2f8fd;
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 750px) {
+    #items-container {
+        width: 60%;
+    }
+
+    #input-container {
+        width:60%
+    }
+}
+
+@media (min-width: 900px) {
+    #items-container {
+        width: 40%;
+    }
+
+    #input-container {
+        width:40%
+    }
+}
