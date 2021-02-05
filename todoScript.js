@@ -8,7 +8,6 @@ let todo = {
 	isComplete: false,
 };
 
-if(todos.length>0)createListItems();
 
 
 const createListItems = () => {
@@ -31,6 +30,12 @@ const createListItems = () => {
 		ul.append(li);
 	});
 };
+const localTodosString = window.localStorage.getItem('todos');
+const localTodos = JSON.parse(localTodosString);
+localTodos?.forEach(element => {
+	todos.push({title:element.title,complete:element.complete})
+	createListItems();
+});
 
 input.addEventListener('change', (e) => {
 	todo.name = e.target.value;
@@ -44,5 +49,6 @@ form.addEventListener('submit', (e) => {
 	} else {
 		todos.push({ title: todo.name, complete: todo.isComplete });
 		createListItems();
+		window.localStorage.setItem('todos',JSON.stringify(todos));
 	}
 });
